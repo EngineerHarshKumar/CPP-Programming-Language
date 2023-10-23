@@ -78,6 +78,7 @@ int main() {
 
     std::cout << "Hello My Friend C++" << '\n' ;
     int userInput { getValueFromUser() } ;
-    std::cout << "Double is " << userInput * 2 ;
+    std::cout << "Double is " << userInput * 2  << '\n';
+    std::cout << "The End C++ Program" ;
 
 }
