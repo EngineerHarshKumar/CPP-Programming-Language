@@ -68,7 +68,26 @@ This value is used to initialized the parameters of function
 #include <iostream>
 #include <cstdlib> // for EXIT_SUCCESS to indicate status of main() function to Operating system
 
+int getValueFromUser() {
+
+	std::cout << "Enter Value: " ;
+	int userValue {} ;
+	std::cin >> userValue ;
+
+	return userValue ;
+}
+
+void printDouble(int userValue) {
+	
+	std::cout << "Double of " << userValue << " is " << (userValue * 2) << '\n';
+}
+
 int main() {
+
+	// int value { getValueFromUser() } ;
+	// printDouble(value) ;
+
+	printDouble( getValueFromUser() ) ;
 
     return EXIT_SUCCESS ;
 }
