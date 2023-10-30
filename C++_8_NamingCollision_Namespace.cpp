@@ -36,7 +36,7 @@ using Directive is used to make accessible of the identifier defined inside the 
 
 But Try to don't use it because it will make ambiguous in some cases...as its will get the all the identifier inside othe namespace into the scop where the using directive statement is used....
 
-NOTE: we also defined our own namespace ...
+NOTE: we also defined our own namespace ...we will learn later..
 */
 
 #include <iostream>
