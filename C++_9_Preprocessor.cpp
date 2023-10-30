@@ -41,7 +41,7 @@ The Conditional Compilation preprocessor directive is a way to allow you to deci
 #ifndef preprocessor directive is opposite of the previous one ( #ifdef ) , it mean if identifier is not defined then its will be compiler otherwise not to the corrosponding #endif
 
 
-
+Directives defined in one code file do not have impact on other code files in the same project
 */
 
 #include <iostream>
@@ -53,6 +53,13 @@ int main() {
 
     std::cout << "Hello C++ Preprocessors" << '\n' ;
     std::cout << "Laptop Brand: " << LAPTOP << '\n' ;
+
+    // Try to access JOKER macro which defined outside, at the end of the 'main()' function
+    // std::cout << JOKER << '\n' ;
+    // Now we are learn that directives are only valid from the point of definition to the end of the file in which they are defined, we cannot access the directive before its declarartion 
+
+    // LAPTOP = 90 ;
+    // All macro is read-only we cannot reassign value to it ...
 
 #ifdef LAPTOP
 
@@ -69,3 +76,5 @@ int main() {
     
     return EXIT_SUCCESS ;
 }
+
+#define JOKER "Villen" 
